@@ -1,13 +1,34 @@
+import 'package:bitnaro/common/utils/dependency_injection/dependency_injection.dart';
+import 'package:bitnaro/common/utils/routes/app_route_config.dart';
+import 'package:bitnaro/common/utils/theme/app_theme.dart';
+import 'package:bitnaro/presentation/splash/bloc/splash_bloc.dart';
+import 'package:bitnaro/presentation/splash/bloc/splash_event.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class BitnoraApp extends StatelessWidget {
   const BitnoraApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Placeholder(),
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(
+          create: (context) => sl<SplashBloc>()..add(const AppStarted()),
+        ),
+      ],
+      child: MaterialApp.router(
+        debugShowCheckedModeBanner: false,
+        routerConfig: AppRouteConfig.config,
+        theme: AppTheme.light,
+        darkTheme: AppTheme.dark,
+        builder: (context, child) {
+          AppTheme.applyStatusBarStyle(
+            MediaQuery.platformBrightnessOf(context),
+          );
+          return child!;
+        },
+      ),
     );
   }
 }

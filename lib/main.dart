@@ -1,10 +1,11 @@
 import 'package:bitnaro/app.dart';
+import 'package:bitnaro/common/utils/dependency_injection/dependency_injection.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 Future<void> main(List<String> args) async {
-  WidgetsFlutterBinding.ensureInitialized();
+  await _init();
   await SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitUp,
   ]).then((
@@ -19,4 +20,9 @@ Future<void> main(List<String> args) async {
       ),
     );
   });
+}
+
+Future<void> _init() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await DependencyInjection.init();
 }
