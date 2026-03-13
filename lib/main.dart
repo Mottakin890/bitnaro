@@ -16,7 +16,7 @@ Future<void> main(List<String> args) async {
         designSize: Size(375, 812),
         minTextAdapt: true,
         splitScreenMode: true,
-        child: BitnoraApp(),
+        child: BitnaroApp(),
       ),
     );
   });
