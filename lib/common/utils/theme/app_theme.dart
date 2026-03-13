@@ -51,7 +51,6 @@ class AppTheme {
       scrim: AppColors.cBlack,
       inverseSurface: AppColors.cBlack,
       onInverseSurface: AppColors.cWhite,
-      inversePrimary: AppColors.primaryLight,
     ),
 
     scaffoldBackgroundColor: AppColors.cWhite,
