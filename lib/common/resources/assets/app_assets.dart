@@ -7,4 +7,7 @@ class AppAssets {
   static const String user = '$svgPath/user.svg';
   static const String consumer = '$svgPath/consumer.svg';
   static const String check = '$svgPath/check.svg';
+  static const String email = '$svgPath/mail.svg';
+  static const String lock = '$svgPath/lock.svg';
+  static const String person = '$svgPath/person.svg';
 }

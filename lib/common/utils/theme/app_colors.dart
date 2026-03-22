@@ -42,6 +42,7 @@ class AppColors {
   static const Color greyDarkHover = Color(0xFF434343);
   static const Color greyDarkActive = Color(0xFF323232);
   static const Color greyDarker = Color(0xFF272727);
+  static const Color softGrey = Color(0xFF666666);
 
   static const Color cWhite = Color(0xFFFFFFFF);
   static const Color cBlack = blackNormal;

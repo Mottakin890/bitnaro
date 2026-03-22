@@ -69,7 +69,7 @@ class AppTheme {
       actionsIconTheme: const IconThemeData(color: AppColors.cBlack),
       systemOverlayStyle: const SystemUiOverlayStyle(
         statusBarColor: AppColors.primary,
-        statusBarIconBrightness: Brightness.dark,
+        statusBarIconBrightness: Brightness.light,
         statusBarBrightness: Brightness.light,
         systemNavigationBarColor: AppColors.cWhite,
         systemNavigationBarIconBrightness: Brightness.dark,
@@ -120,23 +120,23 @@ class AppTheme {
 
     inputDecorationTheme: InputDecorationTheme(
       filled: true,
-      fillColor: AppColors.greyLight,
+      fillColor: AppColors.cWhite,
       contentPadding: REdgeInsets.all(16),
-      hintStyle: TextStyles.bodyBaseRegular(AppColors.greyNormal),
-      labelStyle: TextStyles.bodyBaseRegular(AppColors.greyDark),
+      hintStyle: TextStyles.bodyBaseRegular(AppColors.softGrey),
+      labelStyle: TextStyles.bodyBaseRegular(AppColors.softGrey),
       floatingLabelStyle: TextStyles.bodySMMedium(AppColors.primary),
       errorStyle: TextStyles.bodySMRegular(AppColors.redNormal),
       border: OutlineInputBorder(
         borderRadius: BorderRadius.circular(6.r),
-        borderSide: const BorderSide(color: AppColors.greyLightActive),
+        borderSide:  BorderSide(color: AppColors.softGrey, width: 1.w),
       ),
       enabledBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(6.r),
-        borderSide: const BorderSide(color: AppColors.greyLightActive),
+        borderSide: const BorderSide(color: AppColors.softGrey),
       ),
       focusedBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(6.r),
-        borderSide: BorderSide(color: AppColors.primary, width: 1.5.w),
+        borderSide: BorderSide(color: AppColors.secondary, width: 1.w),
       ),
       errorBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(6.r),
@@ -148,7 +148,7 @@ class AppTheme {
       ),
       disabledBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(6.r),
-        borderSide: const BorderSide(color: AppColors.greyLightHover),
+        borderSide: const BorderSide(color: AppColors.softGrey),
       ),
     ),
 
