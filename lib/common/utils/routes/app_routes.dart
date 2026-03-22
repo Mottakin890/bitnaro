@@ -3,7 +3,7 @@ class AppRoutes {
 
   static const String splash = '/';
   static const String chooseAccount = '/chooseAccount';
-  static const String signIn = '/signIn';
+  static const String login = '/login';
   static const String signUp = '/signUp';
   static const String forgotPassword = '/forgotPassword';
 }

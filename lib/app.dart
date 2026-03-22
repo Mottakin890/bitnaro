@@ -4,6 +4,7 @@ import 'package:bitnaro/common/utils/theme/app_theme.dart';
 import 'package:bitnaro/presentation/choose_account/bloc/choose_account_type_bloc.dart';
 import 'package:bitnaro/presentation/splash/bloc/splash_bloc.dart';
 import 'package:bitnaro/presentation/splash/bloc/splash_event.dart';
+import 'package:bitnaro/presentation/auth/bloc/auth_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -18,6 +19,7 @@ class BitnaroApp extends StatelessWidget {
           create: (context) => sl<SplashBloc>()..add(const AppStarted()),
         ),
         BlocProvider(create: (context) => sl<ChooseAccountTypeBloc>()),
+        BlocProvider(create: (context) => sl<AuthBloc>()),
       ],
       child: MaterialApp.router(
         debugShowCheckedModeBanner: false,
